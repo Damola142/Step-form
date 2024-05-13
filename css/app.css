@@ -1,0 +1,515 @@
+:root {
+	--marineBlue: hsl(213, 96%, 18%);
+	--purplishBlue: hsl(243, 100%, 62%);
+	--pastelBlue: hsl(228, 100%, 84%);
+	--lightBlue: hsl(206, 94%, 87%);
+	--strawberryRed: hsl(354, 84%, 57%);
+	--coolGray: hsl(231, 11%, 63%);
+	--lightGray: hsl(229, 24%, 87%);
+	--magnolia: hsl(217, 100%, 97%);
+	--alabaster: hsl(231, 100%, 99%);
+	--white: hsl(0, 0%, 100%);	
+}
+
+
+* {
+	color: var(--marineBlue);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: puppins;
+	outline: none;
+}
+
+
+h2 {
+	font-size: 1.48rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+
+p {
+	color: var(--coolGray);
+	margin: 10px 0 0;
+	width: 97%;
+	font-size: 15.7px;
+	line-height: 1.4rem;
+}
+
+
+
+img {
+	display: inline-block;
+	object-fit: contain;
+	object-position: center;
+}
+
+
+button {
+	background: var(--marineBlue);
+	color: var(--alabaster);
+	padding: 10px 16px;
+	font-size: 13px;
+	font-weight: 500;
+	border: 0;
+	border-radius: 4px;
+	transition: opacity .5s;
+}
+
+
+button:hover {
+	opacity: .8;
+}
+
+
+label {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+
+input {
+	color: var(--marineBlue);
+	padding: 9px 2% 9px 4%;
+	display: block;
+	width: 100%;
+	font-weight: 500;
+	border: 1.5px solid var(--lightGray);
+	border-radius: 4px;
+}
+
+
+input:hover, input:focus {
+	border: 1.5px solid var(--purplishBlue);
+}
+
+
+input::placeholder {
+	color: var(--coolGray);
+	font-weight: 500;
+}
+
+
+[name="pointer"] {
+	cursor: pointer;
+}
+
+
+body {
+	background: var(--magnolia);
+}
+
+
+
+picture img {
+	width: 100%;
+}
+
+
+div.steps {
+	margin: 0 auto;
+	width: 11.2rem;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	top: -8.8rem;
+}
+
+
+div.step div {
+	display: none;
+}
+
+span[name="step"] {
+	color: var(--alabaster);
+	height: 1.85rem;		width: 1.85rem;
+	display: flex;
+	font-size: 13px;
+	font-weight: 700;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid var(--alabaster);
+	border-radius: 50%;
+	transition: background .3s;
+}
+
+
+span#presentStep {
+	color: var(--marineBlue);
+	background: var(--lightBlue);
+}
+
+
+div.label {
+	margin: 1rem 0 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+div.label span {
+	color: var(--strawberryRed);
+	font-size: 13px;
+	font-weight: 600;
+	display: none;
+}
+
+div[name="sect"] {
+	background: var(--white);
+	margin: -6.6rem auto 8rem;
+	padding: 2rem 6.4%;
+	width: 92%;
+	border-radius: 10px;
+	position: relative;
+	z-index: 10;
+}
+
+
+button.btn1 {
+	margin: 6rem 0 0;
+	position: absolute;
+	right: 0;
+}
+
+
+div.planSelection {
+	display: none;
+}
+
+
+div.planSelection p {
+	margin: 0 0 1.2rem;
+}
+
+
+
+
+div.plan {
+	margin: 10px 0 0;
+	padding: 1rem 14px;
+	display: flex;
+	align-items: flex-start;
+	border: 1.5px solid var(--lightGray);
+	border-radius: 10px;
+	transition: border .5s;
+}
+
+
+div.plan:hover {
+	border-color: var(--purplishBlue);
+}
+
+
+div#selectedPlan {
+	background: var(--alabaster);
+	border-color: var(--purplishBlue);
+}
+
+
+div.plans div.plan div {
+	margin: 0 0 0 14px;
+	height: 2.4rem;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	transition: height .2s;
+}
+
+
+div.plans div.plan div span:nth-of-type(1) {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+
+div.plans div.plan div span:nth-of-type(2) {
+	color: var(--coolGray);
+	font-size: 15px;
+}
+
+
+div.plans div.plan div span:nth-of-type(3) {
+	font-size: 12px;
+	font-weight: 700;
+	display: none;
+}
+
+
+div.switchMoYr {
+	background: var(--alabaster);
+	margin: 1.5rem 0 0;
+	padding: 1rem 13%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 10px;
+}
+
+
+div.switchMoYr span {
+	color: var(--coolGray);
+	font-size: 14px;
+	font-weight: 700;
+	display: inline-block;
+	transition: color .3s;
+}
+
+
+div.switchMoYr span#selectedPlanDuration {
+	color: var(--marineBlue);
+}
+
+
+div.switchMoYr span:nth-of-type(2) {
+	padding: 4px;
+	display: flex;
+	align-items: center;
+}
+
+
+div.switchMoYr span:nth-of-type(2) span {
+	background: var(--white);
+	height: 11px;		width: 11px;
+	border-radius: 50%;
+	transition: margin .4s;
+}
+
+
+span.switch {
+	background: var(--marineBlue);
+	height: 1.15rem;		width: 2.26rem;
+	border-radius: 10px;
+}
+
+
+div.nxtPrv {
+	margin: 3rem 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+div.nxtPrv span {
+	color: var(--coolGray);
+	font-size: 13.5px;
+	font-weight: 700;
+	transition: color .3s;
+}
+
+
+div.nxtPrv span:hover {
+	color: var(--marineBlue);
+}
+
+
+
+div.pickAddOn {
+	display: none;
+}
+
+
+div.add-on {
+	margin: 10.5px 0 0;
+	padding: 13px 12px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1.5px solid var(--lightGray);
+	border-radius: 6px;
+}
+
+
+div.add-on:nth-of-type(1) {
+	margin: 1.2rem 0 0;
+}
+
+
+div.add-on#picked {
+	background: var(--alabaster);
+	border-color: var(--purplishBlue);
+}
+
+
+div.add-on#picked img {
+	background: var(--purplishBlue);
+}
+
+
+img.checkmark {
+	padding: 3.4px;
+	height: 1.2rem;		width: 1.2rem;
+	border: 1px solid var(--lightGray);
+	border-radius: 4px;
+}
+
+
+div.add-on div {
+	margin: 0 0 0 3px;
+	height: 2.2rem;		width: 10.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+
+div.add-on div span:nth-of-type(1) {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
+div.add-on div span:nth-of-type(2) {
+	color: var(--coolGray);
+	font-size: 12.8px;
+	font-weight: 400;
+}
+
+
+span.add-onVal {
+	color: var(--purplishBlue);
+	font-size: 13px;
+	font-weight: 400;
+}
+
+
+
+div.summary {
+	display: none;
+}
+
+
+div.summ {
+	background: var(--alabaster);
+	margin: 1rem 0 0;
+	padding: 14px;
+	border-radius: 5px;
+}
+
+
+div.summ div.st {
+	margin: 0 0 12px;
+	padding: 5px 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--lightGray);
+}
+
+
+div.summ div div {
+	height: 2.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+
+div.summ div div span:nth-of-type(1) {
+	font-size: 14px;
+	font-weight: 700;
+} 
+
+
+div.summ div div span:nth-of-type(2) {
+	color: var(--coolGray);
+	width: 3rem;
+	font-size: 14px;
+	text-decoration: underline;
+	transition: color .3s;
+}
+
+
+div.summ div div span:nth-of-type(2):hover {
+	color: var(--marineBlue);
+}
+
+
+div.summ div div + span {
+	font-size: 14.5px;
+	font-weight: 700;
+}
+
+
+div.st ~ div {
+	font-size: 14px;
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+div.st ~ div span:nth-of-type(1) {
+	color: var(--coolGray);
+	margin: 10px 0;
+}
+
+
+div.st ~ div span:nth-of-type(2) {
+	opacity: .8;
+}
+
+
+
+div.total {
+	margin: 1.8rem 0 0;
+	padding: 0 1rem;
+	font-size: 14px;
+	font-weight: 400;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+div.total span:nth-of-type(1) {
+	color: var(--coolGray);
+}
+
+
+div.total span:nth-of-type(2) {
+	color: var(--purplishBlue);
+	font-size: 15px;
+	font-weight: 700;
+}
+
+
+button.confirm {
+	background: var(--purplishBlue);
+}
+
+
+
+
+div.thankYou {
+	padding: 2rem 5% 5rem;
+	display: none;
+	text-align: center;
+}
+
+
+div.thankYou img {
+	margin: 2.6rem auto 1.5rem;
+	width: 3.5rem;
+	display: block;
+}
+
+
+div thankYou p {
+	width: 100%;
+	font-size: 14.6px;
+	font-weight: 600;
+	line-height: .7rem;
+}
+
+
+
+.addOn3 {
+	background: red;
+}
